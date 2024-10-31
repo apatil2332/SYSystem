@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style>
+        body {
+            background-color: white;
+            color: #333;
+            font-family: Arial, sans-serif;
+            height: 80vh;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            margin: 0;
+            border: 55px solid #92d7e7; 
+            overflow: hidden; 
+        }
+        .left-container {
+            width: 115vh;
+            height: 60vh;
+            background-image: url('/images/left_bg.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: -5%;
+        }
+        .right-container {
+            width: 50%;
+            max-width: 400px;
+            padding-right: 100px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: center;
+            
+        }
+        h1 {
+            color: black;
+            margin-bottom: 20px;
+            font-size: 8vh;
+        }
+        .button-container {
+            display: flex;
+            text-align: center;
+        }
+        form {
+            margin-right: 10px;
+        }
+        button {
+            background-color: palevioletred;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: lightskyblue;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #f3f3f3;
+            border-bottom: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-menu li {
+            padding: 0 15px;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+        .main-container {
+            display: flex; 
+            width: 100%;
+            margin: 0;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="nav-menu">
+            <li><a href="#"></a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <a style="font-size: 250%; font-weight: 150%; font-family: cursive; color: #92d7e7; text-shadow: 2px 2px pink; margin-right: 3%;">SRS</a>
+    </div>
+    <div class="main-container">
+        <div class="left-container">
+        </div>
+        <div class="right-container" style="height: 70vh; width: 90vh; margin-left: -100px;">
+            <h1>Student Registration System</h1>
+            <div class="description">
+                <p>Welcome to our Student Registration System! Seamlessly manage your academic journey with us. Join today for academic excellence and a seamless student experience!</p>
+            </div>
+            <p style="font-weight: bolder; text-align: center;">Get Started</p>
+            <div class="button-container">
+                <form th:action="@{/login}" method="get" style="margin-left: 120px;">
+                    <button type="submit">Login</button>
+                </form>
+                <form th:action="@{/signup}" method="get">
+                    <button type="submit">Signup</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

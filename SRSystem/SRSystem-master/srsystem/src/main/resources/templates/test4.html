@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Prerequisites List</title>
+</head>
+<body>
+    <h1>Prerequisites List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Department Code</th>
+                <th>Course Number</th>
+                <th>Pre-Department Code</th>
+                <th>Pre-Course Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="prerequisite : ${prerequisites}">
+                <td th:text="${prerequisite.departmentCode}"></td>
+                <td th:text="${prerequisite.courseNumber}"></td>
+                <td th:text="${prerequisite.preDepartmentCode}"></td>
+                <td th:text="${prerequisite.preCourseNumber}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
